@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount these for live code changes
+      - ./client:/home/runner/client
+      - ./server:/home/runner/server
+      - ./shared:/home/runner/shared
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+      - HOSTNAME=0.0.0.0
+    # Restart the container automatically if it fails
+    restart: unless-stopped

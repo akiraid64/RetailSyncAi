@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 214 32% 30%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 214 32% 30%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 32% 30%;
+    
+    --primary: 210 40% 25%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 151 55% 42%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 20% 98%;
+    --muted-foreground: 215 14% 53%;
+    
+    --accent: 210 20% 98%;
+    --accent-foreground: 214 32% 30%;
+    
+    --destructive: 6 78% 57%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 40 94% 50%;
+    --warning-foreground: 210 40% 98%;
+    
+    --border: 210 14% 94%;
+    --input: 210 14% 94%;
+    --ring: 214 32% 30%;
+    
+    --radius: 0.5rem;
+
+    --chart-1: 151 55% 42%;
+    --chart-2: 210 40% 25%;
+    --chart-3: 40 94% 50%;
+    --chart-4: 6 78% 57%;
+    --chart-5: 262 47% 55%;
+    
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 214 32% 30%;
+    --sidebar-primary: 210 40% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 14% 89%;
+    --sidebar-accent-foreground: 214 32% 30%;
+    --sidebar-border: 210 14% 89%;
+    --sidebar-ring: 214 32% 30%;
+  }
+ 
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-sm;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+}
+
+.dashboard-card {
+  @apply transition-all duration-200;
+}
+
+.dashboard-card:hover {
+  @apply -translate-y-1 shadow-md;
+}
