@@ -139,7 +139,7 @@ docker-compose up --build
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/retailsync-ai
+https://github.com/akiraid64/RetailSyncAi
 cd retailsync-ai
 
 # Install dependencies
